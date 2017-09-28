@@ -79,7 +79,7 @@ li {
     background-color: transparent;
     border: 0;
 }
-
+/* 清除浮动 */
 .clearfix::before,
 .clearfix::after {
     content: " ";
@@ -93,3 +93,5 @@ li {
 .clearfix {
     *zoom: 1;
 }
+
+

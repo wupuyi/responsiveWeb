@@ -65,5 +65,50 @@
 
 ### 2. 清除浮动
 
+1. 元素末尾增加一个div清除浮动
+
+2. overflow
+
+3. 给父元素清除浮动
+
+4. 伪类清除浮动
+
+```css
+.clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+```
+
+`BFC` 块级格式化上下文
+只要触发了BFC就能触发清除浮动，
+怎么触发BFC, 如float，overflow。（此处有待深究）
+
+创建匿名表格但愿触发BFC
+
+```css
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+```
 
 
+
+## 09/29
