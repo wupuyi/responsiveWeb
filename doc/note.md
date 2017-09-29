@@ -112,3 +112,26 @@
 
 
 ## 09/29
+
+### 1. Chrome 中文字体最小下限是12px
+
+因此当`html`的`font-size`设置为62.5%的时候，实际在Chrome中中文不是10px，而是12px。
+
+因此3rem就是36px
+
+
+### 2. `li`设置导航时，两个元素中间有分割线。
+
+```css
+header .top ul li + li {
+    border-left: 1px solid #999999;
+    margin-left: -3px;
+}
+```
+当设置`display: inline-block`的时候，*元素中间会存在间隙*，本质是html元素中间的空白字符（如：换行符）。
+
+解决方法：
+    1. ul（父元素）的`font-size`设置为0，再给li设置`font-size`。
+    2. 手动清除空白符。
+    3. `margin-left: -3px`设置副边距;
+    4. css3解决方案white-space-collapsing(兼容性不好)
