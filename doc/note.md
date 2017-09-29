@@ -147,4 +147,10 @@ element{
 三等分宽度
 
 
-### 4. 
+### 4. `@media only screen and (max-width: 80rem){}`
+
+媒体查询使用相对单位的时候会有一个坑，尽管设置了html的`1rem = 10px`，但是媒体查询级别很高，并非html的一个子元素，直接应用到最高级别，为浏览器的默认值。即`1rem = 16px`
+
+因为本身为浏览器默认值，rem存在兼容性问题，所以建议使用em
+
+`@media only screen and (max-width: 50em){}`
