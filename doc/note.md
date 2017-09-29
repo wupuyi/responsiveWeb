@@ -154,3 +154,5 @@ element{
 因为本身为浏览器默认值，rem存在兼容性问题，所以建议使用em
 
 `@media only screen and (max-width: 50em){}`
+
+### 5. `@media print {}`添加打印样式
