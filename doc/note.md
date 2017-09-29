@@ -136,6 +136,7 @@ header .top ul li + li {
     3. `margin-left: -3px`设置副边距;
     4. css3解决方案white-space-collapsing(兼容性不好)
 
+
 ### 3. css3计算方法 `calc()`
 
 ```css
@@ -144,3 +145,6 @@ element{
 }
 ```
 三等分宽度
+
+
+### 4. 
