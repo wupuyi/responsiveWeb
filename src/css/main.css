@@ -295,6 +295,84 @@ header .main ul li a:active {
     padding: 0;
     color: #999999;
 }
+
+
+/* 最新公告 */
+
+.notice {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+.notice a {
+    float: left;
+    display: inline-block;
+    width: 70%;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.notice a:first-child {
+    /* 隐藏滚动条 */
+    text-overflow: ellipsis;
+    /* 文字隐藏 */
+    overflow: hidden;
+    /* 文字不换行 */
+    white-space: nowrap;
+    /*保证公告不换行，太长的省略*/
+}
+
+.notice a:first-child::before {
+    content: '最新公告：\00a0\00a0';
+    /*\00a0换行*/
+    color: #aaaaaa;
+}
+
+.notice a span {
+    color: #999999;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.notice a.more {
+    float: right;
+    width: auto;
+    margin-right: 2rem;
+    color: #ff9900;
+}
+
+
+
+/* 产品列表 */
+
+.product {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: #f5f9fa;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+.product h2 {
+    float: left;
+    width: 20%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #635c51;
+}
+
+.product h2 em {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
 /* 底部导航 */
 
 footer {
