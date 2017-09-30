@@ -156,3 +156,37 @@ element{
 `@media only screen and (max-width: 50em){}`
 
 ### 5. `@media print {}`添加打印样式
+
+
+
+## 09/30
+
+### 1. srcset
+
+```css
+<img src="src/img/ad001.png"
+     srcset="src/img/ad001.png 480w, 
+             src/img/ad001-m.png 800w, 
+             src/img/ad001-l.png 1600w"
+    sizes="100vw">
+```
+
+```css
+<img src="src/img/ad001.png"
+     srcset="src/img/ad001.png 480w, 
+             src/img/ad001-m.png 800w, 
+             src/img/ad001-l.png 1600w"
+     sizes="(min-width:800px) calc(100vw - 38em), 100vw">
+```
+
+### 2. `picture`
+
+```css
+<picture>
+    <source media="(max-width:36em)"
+            srcset="img/tiananmen-s.jpg 768w">
+    <source 
+            srcset="img/tiananmen.jpg 1800w"> 
+    <img src="img/tiananmen.jpg" alt="">
+</picture>
+```
